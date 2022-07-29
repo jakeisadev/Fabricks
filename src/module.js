@@ -1,18 +1,7 @@
-import React, { useState } from 'react';
-import validator from 'validator'
+import React from 'react';
 
 const Module = () => {
 
-  const [errorMessage, setErrorMessage] = useState('')
-  
-  const isCreditCard = (str) => {
-    
-    if (validator.isCreditCard(str)) {
-      setErrorMessage('Valid Credit Card Number')
-    } else {
-      setErrorMessage('Please enter valid Credit Card Number.')
-    }
-  }
   return (
     <div className="wrapper">
         <h2>Enter Information Below</h2>
@@ -29,15 +18,15 @@ const Module = () => {
                     <p><label>State: </label>
                     <input type="text" name='name' id='name' placeholder='name' required></input></p>
                     <p><label>Zip-Code: </label>
-                    <input type="text" name='name' id='name' placeholder='name' required></input></p>
+                    <input type="number" name='zip-code' id='zip-code' placeholder='Zip Code' required></input></p>
                     <p><label>Card Number: </label>
-                    <input type="text" onChange={(e) => isCreditCard(e.target.value)} 
-                    name='name' id='name' placeholder='Card Number' required></input><br />
-                    <span>{errorMessage}</span></p>
+                    <input type="number"
+                    name='card-number' id='card-number' placeholder='Card Number' required></input></p>
                 </fieldset>
             </form>
         </div>
-    </div>
-  )
+      </div>
+  );
 }
+
 export default Module
