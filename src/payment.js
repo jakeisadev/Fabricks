@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Module = () => {
+const Payment = () => {
 
   return (
     <div className="wrapper">
@@ -29,4 +29,4 @@ const Module = () => {
   );
 }
 
-export default Module
+export default Payment
