@@ -1,21 +1,18 @@
 import React from 'react';
-import Navbar from './nav.js';
-import Payment from './payment.js';
-import Home from './home.js';
-import './modal.css';
-import { BrowserRouter, Routes, Route} from "react-router-dom";
+import Payment from './components/Payment.js';
+import Home from './components/Home.js';
+import Navbar from './components/Navbar.js';
+import {BrowserRouter, Route, Router, Link} from 'react-router-dom';
+import Allroutes from './config/Allroutes.js';
 
-export default function App() {
+// Anything above or below Allroutes will appear on any page. Any component.
 
+function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />}>
-          <Route index element={<Home />} />
-          <Route path="nav" element={<Navbar />} />
-          <Route path="payment" element={<Payment />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
-  );
+    <>
+      <Allroutes/>
+    </>
+  )
 }
+
+export default App
