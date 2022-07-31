@@ -5,13 +5,12 @@ body {
     padding: 0;
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
+    background: #f5f7fb;
 }
 /* Payment Form CSS */
-fieldset
-{
-  background-color:#CCC;
-  max-width:200px;
-  padding:16px;	
+fieldset {
+  border: none;
+  width: 200px;
   margin: auto;
 }
 legend {
@@ -20,6 +19,17 @@ legend {
 .form-title {
     text-align: center;
     letter-spacing: .15rem;
+}
+label{
+    padding-bottom: 2rem;
+    letter-spacing: .15rem;
+}
+input {
+    outline: 0;
+    border-width: 0 0 2px;
+    border-color: black;
+    height: 1.5rem;
+    border-radius: 5px;
 }
 #state {
     width: 5%;
@@ -35,6 +45,7 @@ legend {
     width: 18%;
 }
 #card-cvv {
-    width: 11%;
+    text-align: center;
+    width: 14%;
 }
 /* End Payment Form CSS */

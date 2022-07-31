@@ -1,7 +1,10 @@
 import React from "react";
 import "./../css/styles.css";
+import Tippy from '@tippyjs/react';
+import 'tippy.js/dist/tippy.css'
 
 const Payment = () => {
+
   return (
     <div className="form-wrapper">
       <h2 className="form-title">Enter Information Below</h2>
@@ -35,7 +38,7 @@ const Payment = () => {
             </p>
             <p>
               <label aria-label="Email" aria-required="true">
-                Last Name:{" "}
+                Email Address:{" "}
               </label>
               <input
                 type="text"
@@ -119,6 +122,7 @@ const Payment = () => {
               <label aria-label="Zip Code" aria-required="true">
                 Zip-Code:{" "}
               </label>
+              <Tippy content="Accepts 5-digit Zip-Code.">
               <input
                 type="number"
                 name="zip-code"
@@ -126,11 +130,13 @@ const Payment = () => {
                 placeholder="Zip"
                 required
               ></input>
+              </Tippy>
             </p>
             <p>
               <label aria-label="Card Number" aria-required="true">
                 Card Number:{" "}
               </label>
+              <Tippy content="16 numerical digits on front of card.">
               <input
                 type="text"
                 name="card-number"
@@ -139,11 +145,13 @@ const Payment = () => {
                 maxLength={16}
                 required
               ></input>
+              </Tippy>
             </p>
             <p>
               <label aria-label="Card Expiration" aria-required="true">
                 Card Expiration:{" "}
               </label>
+              <Tippy content="Format: MM/YY">
               <input
                 type="text"
                 name="card-expiration"
@@ -152,11 +160,13 @@ const Payment = () => {
                 required
                 maxLength={5}
               ></input>
+              </Tippy>
             </p>
             <p>
               <label aria-label="Card CVV" aria-required="true">
                 *CVV:{" "}
               </label>
+              <Tippy content="3 Digits on back of card">
               <input
                 type="text"
                 name="card-cvv"
@@ -165,6 +175,7 @@ const Payment = () => {
                 required
                 maxLength={3}
               ></input>
+              </Tippy>
             </p>
           </fieldset>
         </form>
