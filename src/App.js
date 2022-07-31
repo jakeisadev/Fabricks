@@ -7,6 +7,8 @@ import Allroutes from './config/Allroutes.js';
 
 // Anything above or below Allroutes will appear on any page. Any component.
 
+//https://fakestoreapi.com/ <-- Whenever ready to begin developing axios/grid
+
 function App() {
   return (
     <>

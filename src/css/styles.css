@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+/* Payment Form CSS */
+fieldset
+{
+  background-color:#CCC;
+  max-width:200px;
+  padding:16px;	
+  margin: auto;
+}
+legend {
+    display: none;
+}
+.form-title {
+    text-align: center;
+    letter-spacing: .15rem;
+}
+#state {
+    width: 5%;
+}
+#zip-code {
+    width: 18%;
+}
+#zip-code::placeholder,
+#card-expiration::placeholder {
+    text-align: center;
+}
+#card-expiration {
+    width: 18%;
+}
+#card-cvv {
+    width: 11%;
+}
+/* End Payment Form CSS */
