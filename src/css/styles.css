@@ -17,7 +17,8 @@ fieldset {
     margin: auto;
 }
 fieldset#personal-info label,
-fieldset#normal-info label {
+fieldset#normal-info label,
+fieldset#contact-info {
     font-size: .8rem;
 }
 fieldset#normal-info {

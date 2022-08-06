@@ -8,8 +8,9 @@ const Payment = () => {
   const [nameoncard, setNameOnCard] = useState("");
   const [expdate, setExpDate] = useState("");
   const [cvc, setCvc] = useState("");
-  // const [state, setState] = useState('');
-  const [zip, setZip] = useState("");
+  const [fullname, setFullName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phonenumber, setPhoneNumber] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -18,8 +19,8 @@ const Payment = () => {
                   ${cardnumber}
                   ${nameoncard}
                   ${expdate}
-                  ${cvc}
-                  ${zip}`);
+                  ${cvc}                 
+                  ${fullname}`);
   };
 
   return (
@@ -33,11 +34,15 @@ const Payment = () => {
           onSubmit={handleSubmit}
           id="payment-form"
         >
-            <div className="personal-info-title-div">
+          <div className="personal-info-title-div">
             <h1 aria-label="Pay with card">Pay with card</h1>
-            <img src="./stripe.jpg" alt="Powered by Stripe Payments Logo" className="stripe-img" />
-            </div>
-            <fieldset id="personal-info">
+            <img
+              src="./stripe.jpg"
+              alt="Powered by Stripe Payments Logo"
+              className="stripe-img"
+            />
+          </div>
+          <fieldset id="personal-info">
             <label aria-label="Card Information">Card Information</label>
             <p>
               <input
@@ -62,32 +67,32 @@ const Payment = () => {
               ></input>
             </p>
             <div className="card-exp-and-cvc-div">
-            <p>
-              <input
-                type="text"
-                name="card-exp-date"
-                id="card-exp-date"
-                placeholder="MM / YY"
-                onChange={(event) => setExpDate(event.target.value)}
-                value={expdate}
-                required
-              ></input>
-            </p>
-            <p>
-              <input
-                type="text"
-                name="cvc-card"
-                id="cvc-card"
-                placeholder="CVC"
-                onChange={(event) => setCvc(event.target.value)}
-                value={cvc}
-                required
-              ></input>
-            </p>
-           </div>
-            </fieldset>
-            <fieldset id="normal-info">
-            <label aria-label="Select Your State">Region</label>
+              <p>
+                <input
+                  type="text"
+                  name="card-exp-date"
+                  id="card-exp-date"
+                  placeholder="MM / YY"
+                  onChange={(event) => setExpDate(event.target.value)}
+                  value={expdate}
+                  required
+                ></input>
+              </p>
+              <p>
+                <input
+                  type="text"
+                  name="cvc-card"
+                  id="cvc-card"
+                  placeholder="CVC"
+                  onChange={(event) => setCvc(event.target.value)}
+                  value={cvc}
+                  required
+                ></input>
+              </p>
+            </div>
+          </fieldset>
+          <fieldset id="normal-info">
+            <label aria-label="Select Your State">State</label>
             <p>
               <select aria-label="Select State">
                 <option value="AL" aria-label="Alabama">
@@ -245,20 +250,49 @@ const Payment = () => {
                 </option>
               </select>
             </p>
+          </fieldset>
+          <fieldset id="contact-info">
+            <label aria-label="Contact Information">Contact Information</label>
             <p>
-              <Tippy content="Accepts 5-digit Zip-Code.">
+              <Tippy content="Type your full name">
                 <input
-                  type="number"
-                  name="zip-code"
-                  id="zip-code"
-                  placeholder="Zip"
-                  onChange={(event) => setZip(event.target.value)}
-                  value={zip}
+                  type="text"
+                  name="fullname"
+                  id="full-name"
+                  placeholder="Name"
+                  onChange={(event) => setFullName(event.target.value)}
+                  value={fullname}
                   required
                 ></input>
               </Tippy>
             </p>
-            </fieldset>
+            <p>
+              <Tippy content="Enter a valid email">
+                <input
+                  type="text"
+                  name="email"
+                  id="email"
+                  placeholder="Email"
+                  onChange={(event) => setEmail(event.target.value)}
+                  value={email}
+                  required
+                ></input>
+              </Tippy>
+            </p>
+            <p>
+              <Tippy content="Enter a valid phone number">
+                <input
+                  type="number"
+                  name="phonenumber"
+                  id="phone-number"
+                  placeholder="Phone"
+                  onChange={(event) => setPhoneNumber(event.target.value)}
+                  value={phonenumber}
+                  required
+                ></input>
+              </Tippy>
+            </p>
+          </fieldset>
         </form>
         <div className="btn-payment">
           <button type="submit" id="payment-form">
