@@ -5,48 +5,47 @@ body {
     padding: 0;
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
-    background: #f5f7fb;
+    background: #0e1111;
 }
 /* Payment Form CSS */
 fieldset {
-  border: none;
-  width: 200px;
-  margin: auto;
+    border-top: .2em solid #fcfdff;
+    border-right: transparent;
+    border-bottom: transparent;
+    border-left: transparent;
+    width: 80%;
+    margin: auto;
 }
-legend {
-    display: none;
+fieldset#personal-info label,
+fieldset#normal-info label {
+    font-size: .8rem;
 }
-.form-title {
-    text-align: center;
-    letter-spacing: .15rem;
+fieldset#normal-info {
+    border-top: transparent;
 }
-label{
-    padding-bottom: 2rem;
-    letter-spacing: .15rem;
-}
-input {
+input,
+select {
+    width: 85%;
     outline: 0;
-    border-width: 0 0 2px;
-    border-color: black;
-    height: 1.5rem;
-    border-radius: 5px;
+    border-width: 0;
+    height: 2.8rem;
+    font-size: 1rem;
+    background-color: #f7f7f7;
+    text-indent: .5rem;
+    border-radius: 3px;
+    border: 1px solid transparent;
+    border-top: none;
+    border-bottom: 1px solid #DDD;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,.39), 0 -1px 1px #FFF, 0 1px 0 #FFF;
 }
-#state {
-    width: 5%;
+input::placeholder,
+select::placeholder {
+    color: #b2b2b2;
 }
-#zip-code {
-    width: 18%;
-}
-#zip-code::placeholder,
-#card-expiration::placeholder {
-    text-align: center;
-}
-#card-expiration {
-    width: 18%;
-}
-#card-cvv {
-    text-align: center;
-    width: 14%;
+.form-wrapper {
+    background: #ffffff;
+    width: 85%;
+    margin: auto;
 }
 .form-wrapper button {
     height: 2rem;
@@ -57,8 +56,10 @@ input {
     background-color: black;
     text-align: center;
     font-size: 1.1rem;
-    box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
     transition: .1s;
+}
+.form-wrapper h2 {
+    font-weight: 300;
 }
 .form-wrapper button:hover {
     transform: scale(1.02);
@@ -67,25 +68,44 @@ input {
 .form-wrapper button:focus {
     background-color: green;
 }
+.form-title {
+    text-align: center;
+    letter-spacing: .15rem;
+    padding-top: .5rem;
+}
+.personal-info-title-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.personal-info-title-div h1 {
+    font-weight: 300;
+}
+.personal-info-title-div .stripe-img {
+    width: 35%;
+    height: 35%;
+    padding-bottom: .8rem;
+}
+.card-exp-and-cvc-div {
+    display: flex;
+    justify-content: space-evenly;
+}
+.card-exp-and-cvc-div input {
+    width: 70%;
+}
 .btn-payment {
     width: 42%;
     margin: auto;
     padding-bottom: 1rem;
 }
-.stripe-logo {
-    width: 35%;
-    height: 75%;
-    margin: auto;
-    padding-top: 1em;
+#state {
+    width: 5%;
 }
-.stripe-div {
-    display: flex;
-    align-items: center;
+#zip-code {
+    width: 25%;
 }
-.stripe-div p {
-    font-size: .8rem;
-    white-space: nowrap;
-    padding-right: 1em;
-    padding-top: 1em;
+#zip-code::placeholder {
+    text-align: left;
 }
 /* End Payment Form CSS */
