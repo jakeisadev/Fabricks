@@ -1,5 +1,5 @@
 import React from 'react';
-import Payment from './components/Payment.js';
+import Checkout from './components/Checkout.js';
 import Home from './components/Home.js';
 import Navbar from './components/Navbar.js';
 import {BrowserRouter, Route, Router, Link} from 'react-router-dom';

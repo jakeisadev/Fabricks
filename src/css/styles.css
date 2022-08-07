@@ -7,6 +7,22 @@ body {
     font-family: 'Open Sans', sans-serif;
     background: #0e1111;
 }
+/* Navbar CSS */
+nav {
+    display: flex;
+    justify-content: right;
+    padding-right: 1.5rem;
+}
+nav ul li {
+    display: inline-block;
+    padding: .8rem;
+    font-size: 1.1rem;
+}
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+/* Navbar CSS */
 /* Payment Form CSS */
 fieldset {
     border-top: .2em solid #fcfdff;
@@ -85,7 +101,7 @@ label {
 .form-title {
     text-align: center;
     letter-spacing: .15rem;
-    padding-top: .5rem;
+    padding-top: 1rem;
 }
 .personal-info-title-div {
     display: flex;
@@ -123,3 +139,8 @@ label {
     text-align: left;
 }
 /* End Payment Form CSS */
+/* Footer CSS */
+footer {
+    padding-top: 1rem;
+}
+/* End Footer CSS */

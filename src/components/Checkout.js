@@ -51,13 +51,12 @@ const Payment = () => {
               <p>
                 <Tippy content="16 digits on the front of your card">
                   <input
-                    type="text"
+                    type="number"
                     name="card-number"
                     id="card-number"
                     placeholder="0000 0000 0000 0000"
                     onChange={(event) => setCardNumber(event.target.value)}
                     value={cardnumber}
-                    maxLength={19}
                     required
                   ></input>
                 </Tippy>
@@ -308,12 +307,12 @@ const Payment = () => {
                 </Tippy>
               </p>
             </fieldset>
+            <div className="btn-payment">
+              <button type="submit" id="payment-form">
+                Submit
+              </button>
+            </div>
           </form>
-        </div>
-        <div className="btn-payment">
-          <button type="submit" id="payment-form">
-            Submit
-          </button>
         </div>
     </>
   );

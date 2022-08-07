@@ -1,9 +1,10 @@
 import React from 'react'
-import Payment from '../components/Payment.js';
+import Checkout from '../components/Checkout.js';
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import App from '../App.js';
 import Home from '../components/Home.js';
 import Navbar from '../components/Navbar.js';
+import Footer from '../components/Footer';
 
 // You cannot write anything inside the routes resides the route tag, or even outside the router
 // If you want to add a div or anything, put it after initial browser router or after final route
@@ -25,10 +26,12 @@ const Allroutes = () => {
         <Routes>
             <Route path="/" element={<Home />}>
             </Route>
-            <Route path="/form" element={<Payment />}>
+            <Route path="/form" element={<Checkout />}>
+            </Route>
+            <Route path="/footer" element={<Footer />}>
             </Route>
         </Routes>
-        
+    <Footer/>
     </BrowserRouter>
   )
 }
