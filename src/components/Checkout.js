@@ -104,7 +104,7 @@ const Payment = () => {
               </div>
             </fieldset>
             <fieldset id="normal-info">
-              <label aria-label="Select Your State">State</label>
+              <label aria-label="Select Your State" id="state-label">State</label>
               <p>
                 <select aria-label="Select State">
                   <option value="AL" aria-label="Alabama">
@@ -306,12 +306,12 @@ const Payment = () => {
                   ></input>
                 </Tippy>
               </p>
-            </fieldset>
-            <div className="btn-payment">
+              <div className="btn-payment">
               <button type="submit" id="payment-form">
                 Submit
               </button>
             </div>
+            </fieldset>
           </form>
         </div>
     </>

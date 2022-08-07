@@ -37,6 +37,9 @@ fieldset#normal-info label,
 fieldset#contact-info {
     font-size: .8rem;
 }
+fieldset#contact-info {
+    padding-left: 1.1rem;
+}
 fieldset#normal-info {
     display: flex;
     flex-direction: column;
@@ -44,7 +47,7 @@ fieldset#normal-info {
 }
 input,
 select {
-    width: 85%;
+    width: 90%;
     outline: 0;
     border-width: 0;
     height: 2.8rem;
@@ -56,6 +59,13 @@ select {
     border-top: none;
     border-bottom: 1px solid #DDD;
     box-shadow: inset 0 1px 2px rgba(0,0,0,.39), 0 -1px 1px #FFF, 0 1px 0 #FFF;
+}
+select {
+    margin-top: -1rem;
+}
+input#card-exp-date,
+input#cvc-card {
+    width: 88%;
 }
 input::placeholder,
 select::placeholder {
@@ -78,7 +88,10 @@ select::placeholder {
 label {
     float: left;
     text-align: left;
-    padding: .5rem 0 1rem 1rem;
+    padding: .3rem 0 .5rem 1rem;
+}
+label#state-label {
+    margin-bottom: -.3rem;
 }
 .form-wrapper button {
     height: 2rem;
@@ -119,15 +132,26 @@ label {
 }
 .card-exp-and-cvc-div {
     display: flex;
+    margin: 0 auto;
+    width: 96%;
     justify-content: space-evenly;
+    margin-bottom: -.5rem;
+    margin-top: -1rem;
 }
 .card-exp-and-cvc-div input {
     width: 70%;
 }
+button#payment-form {
+    width: 90%;
+    height: 40px;
+    text-align: center;
+}
 .btn-payment {
-    width: 42%;
+    width: 100%;
+    height: 90%;
     margin: auto;
     padding-bottom: 1rem;
+    height: 2rem;
 }
 #state {
     width: 5%;
@@ -142,5 +166,10 @@ label {
 /* Footer CSS */
 footer {
     padding-top: 1rem;
+}
+p.copyright {
+    font-size: 1rem;
+    color: white;
+    text-align: center;
 }
 /* End Footer CSS */
