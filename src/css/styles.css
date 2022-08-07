@@ -7,6 +7,12 @@ body {
     font-family: 'Open Sans', sans-serif;
     background: #0e1111;
 }
+/* Home CSS */
+.grid-container {
+    background-color: #fff;
+    height: 100%;
+}
+/* End Home CSS */
 /* Navbar CSS */
 nav {
     display: flex;

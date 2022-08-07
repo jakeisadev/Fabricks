@@ -22,6 +22,8 @@ const Payment = () => {
                   ${cvc}                 
                   ${fullname}`);
   };
+  
+  //The card spacing automatically comes with Stripe. Everything actually comes with Stripe.
 
   return (
     <>
