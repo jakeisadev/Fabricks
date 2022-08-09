@@ -4,23 +4,11 @@ import Tippy from "@tippyjs/react";
 import "tippy.js/dist/tippy.css";
 
 const Payment = () => {
-  const [cardnumber, setCardNumber] = useState("");
-  const [nameoncard, setNameOnCard] = useState("");
-  const [expdate, setExpDate] = useState("");
-  const [cvc, setCvc] = useState("");
-  const [fullname, setFullName] = useState("");
-  const [email, setEmail] = useState("");
-  const [phonenumber, setPhoneNumber] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    console.log(`Form submitted, 
-                  ${cardnumber}
-                  ${nameoncard}
-                  ${expdate}
-                  ${cvc}                 
-                  ${fullname}`);
+    console.log("Form submitted");
   };
   
   //The card spacing automatically comes with Stripe. Everything actually comes with Stripe.
@@ -57,8 +45,6 @@ const Payment = () => {
                     name="card-number"
                     id="card-number"
                     placeholder="0000 0000 0000 0000"
-                    onChange={(event) => setCardNumber(event.target.value)}
-                    value={cardnumber}
                     required
                   ></input>
                 </Tippy>
@@ -70,8 +56,6 @@ const Payment = () => {
                     name="nameoncard"
                     id="nameoncard"
                     placeholder="Name On Card"
-                    onChange={(event) => setNameOnCard(event.target.value)}
-                    value={nameoncard}
                     required
                   ></input>
                 </Tippy>
@@ -84,8 +68,6 @@ const Payment = () => {
                       name="card-exp-date"
                       id="card-exp-date"
                       placeholder="MM / YY"
-                      onChange={(event) => setExpDate(event.target.value)}
-                      value={expdate}
                       required
                     ></input>
                   </Tippy>
@@ -97,8 +79,6 @@ const Payment = () => {
                       name="cvc-card"
                       id="cvc-card"
                       placeholder="CVC"
-                      onChange={(event) => setCvc(event.target.value)}
-                      value={cvc}
                       required
                     ></input>
                   </Tippy>
@@ -276,8 +256,6 @@ const Payment = () => {
                     name="fullname"
                     id="full-name"
                     placeholder="Name"
-                    onChange={(event) => setFullName(event.target.value)}
-                    value={fullname}
                     required
                   ></input>
                 </Tippy>
@@ -289,8 +267,6 @@ const Payment = () => {
                     name="email"
                     id="email"
                     placeholder="Email"
-                    onChange={(event) => setEmail(event.target.value)}
-                    value={email}
                     required
                   ></input>
                 </Tippy>
@@ -302,8 +278,6 @@ const Payment = () => {
                     name="phonenumber"
                     id="phone-number"
                     placeholder="Phone"
-                    onChange={(event) => setPhoneNumber(event.target.value)}
-                    value={phonenumber}
                     required
                   ></input>
                 </Tippy>

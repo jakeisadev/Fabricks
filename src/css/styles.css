@@ -5,12 +5,86 @@ body {
     padding: 0;
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
-    background: #0e1111;
+    background: #ffffff;
 }
 /* Home CSS */
-.grid-container {
-    background-color: #fff;
+.sale {
+    color: black;
+    text-align: center;
+}
+input[type="text"] {
+    display: block;
+    width: 60%;
+    margin: auto;
+    margin-bottom: 2rem;
+}
+.categories ul {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgba(53, 56, 57, 0.3);
+    margin-top: 1rem;
+    text-align: center;
+}
+.categories ul li {
+    list-style-type: none;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.container {
+    position: relative;
+    width: 1500px;
+    display: grid;
+    margin: auto;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 1rem;
+    background-color: #FFF;
+    padding: 1rem;
+}
+.container .card{
+    width: 100%;
+    background-color: #f7f7f7;
+    border: 5px solid #f7f7f7;
+    border-radius: 4px;
+}
+.container .card .img-box {
+    position: relative;
+    width: 100%;
+    height: 310px;
+    overflow: hidden;
+}
+.container .card .img-box img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 100%;
+    object-fit: cover;
+    transition: .2s ease-in-out;
+    transform-origin: right;
+    border-radius: 4px;
+}
+.container .card:hover .img-box img {
+    transform: scale(1.2);
+}
+.container .card .content {
+    padding: 1rem;
+}
+.container .card .content .clothing-price {
+    text-align: center;
+    font-size: 1.3rem;
+}
+.container .card .content .clothing-title-div {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+.container .card .content .clothing-title h3 {
+    font-size: 1.2rem;
+    font-weight: bolder;
+    margin: 5px 0;
+}
+.clothing-desc-div {
+    display: none;
 }
 /* End Home CSS */
 /* Navbar CSS */
@@ -18,13 +92,19 @@ nav {
     display: flex;
     justify-content: right;
     padding-right: 1.5rem;
+    background-color: #0e1111;
 }
 nav ul li {
     display: inline-block;
-    padding: .8rem;
+    padding: .9rem;
     font-size: 1.1rem;
+    letter-spacing: .2rem;
 }
 nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+nav ul li {
     text-decoration: none;
     color: white;
 }
