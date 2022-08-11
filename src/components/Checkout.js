@@ -19,7 +19,6 @@ const Payment = () => {
         <h2 className="form-title">Finalize Order</h2>
         <div id="pay-form">
           <div className="personal-info-title-div">
-            <h1 aria-label="Pay with card">Pay with card</h1>
             <img
               src="./stripe.jpg"
               alt="Powered by Stripe Payments Logo"

@@ -23,6 +23,10 @@ const Home = () => {
 
   return (
     <>
+    <div className="sale">
+      <h1>10% Off on sign up (Today Only!)</h1>
+    </div>
+    <input type="text" id="search" />
     <div className="categories">
       <ul>
         <li>Men</li>
@@ -31,10 +35,6 @@ const Home = () => {
         <li>Electronics</li>
       </ul>
     </div>
-    <div className="sale">
-      <h1>10% Off on sign up (Today Only!)</h1>
-    </div>
-    <input type="text" id="search" />
       <div className="container">
         {/* We can write JSX within the return statement through the map function */}
         {products.map((product) => {

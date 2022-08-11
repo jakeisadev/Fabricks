@@ -20,16 +20,20 @@ input[type="text"] {
 }
 .categories ul {
     display: flex;
-    justify-content: space-evenly;
-    background-color: rgba(53, 56, 57, 0.3);
+    justify-content: left;
     margin-top: 1rem;
     text-align: center;
 }
 .categories ul li {
     list-style-type: none;
-    color: white;
+    color: black;
+    letter-spacing: .1rem;
     font-size: 1.2rem;
     font-weight: bold;
+    padding: .7rem;
+}
+.categories ul li:hover {
+    text-decoration: 4px solid black underline;
 }
 .container {
     position: relative;
@@ -91,8 +95,18 @@ input[type="text"] {
 nav {
     display: flex;
     justify-content: right;
+    align-items: center;
     padding-right: 1.5rem;
     background-color: #0e1111;
+}
+/* nav img:first-child {
+    border: 2px solid red;
+    
+} */
+nav img {
+    width:170px;
+    height: 170px;
+    float: left;
 }
 nav ul li {
     display: inline-block;
@@ -131,7 +145,7 @@ fieldset#normal-info {
     flex-direction: column;
     border-top: transparent;
 }
-input,
+.form-wrapper input,
 select {
     width: 90%;
     outline: 0;
@@ -164,6 +178,7 @@ select::placeholder {
 }
 .payment-page-title h2 {
     font-weight: 300;
+    padding-bottom: 1rem;
 }
 .form-wrapper {
     background: #ffffff;
@@ -207,9 +222,6 @@ label#state-label {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-}
-.personal-info-title-div h1 {
-    font-weight: 300;
 }
 .personal-info-title-div .stripe-img {
     width: 35%;
@@ -259,3 +271,23 @@ p.copyright {
     text-align: center;
 }
 /* End Footer CSS */
+/* MEDIA QUERIES */
+@media (min-width: 1200px) {
+    /* Checkout.js */
+    .personal-info-title-div .stripe-img {
+        width: 20%;
+        height: 20%;
+    }
+    .form-wrapper label {
+        padding-left: 2.3rem;
+        padding-bottom: 1rem;
+    }
+    .form-wrapper .card-exp-and-cvc-div {
+        justify-content: left;
+        padding-left: 2.5rem;
+    }
+    input#card-exp-date,
+    input#cvc-card {
+        margin-left: 0;
+    }
+}
