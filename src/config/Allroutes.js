@@ -1,6 +1,6 @@
 import React from 'react'
 import Checkout from '../components/Checkout.js';
-import {BrowserRouter, Route, Routes} from 'react-router-dom';
+import {HashRouter, Route, Routes} from 'react-router-dom';
 import App from '../App.js';
 import Home from '../components/Home.js';
 import Navbar from '../components/Navbar.js';
@@ -21,7 +21,7 @@ import Footer from '../components/Footer';
 
 const Allroutes = () => {
   return (
-    <BrowserRouter>
+    <HashRouter>
     <Navbar/>
         <Routes>
             <Route path="/" element={<Home />}>
@@ -32,7 +32,7 @@ const Allroutes = () => {
             </Route>
         </Routes>
     <Footer/>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 
