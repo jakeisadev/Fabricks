@@ -26,7 +26,7 @@ const Home = () => {
     <div className="sale">
       <h1>10% Off on sign up (Today Only!)</h1>
     </div>
-    <input type="text" id="search" />
+    <input type="text" id="search" placeholder="Fjallraven, Casual, Mens "/>
     <div className="categories">
       <ul>
         <li>Men</li>
@@ -55,6 +55,12 @@ const Home = () => {
                 </div>
                 <div className="clothing-price-div">
                   <p className="clothing-price">${product.price.toFixed(2)}</p>
+                  <p className="clothing-count">{product.rating.count} in stock</p>
+                  <p className="clothing-count">{product.rating.rate}/5 Stars</p>
+                  <div className="button-div">
+                    <button className="btn-1">Add to Cart</button>
+                    <button className="btn-2">Details</button>
+                  </div>
                 </div>
                 <div className="clothing-desc-div">
                   <p className="clothing-description">{product.description}</p>
